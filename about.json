@@ -11,6 +11,9 @@
   "modifiers": {
     "serialize_topic_excerpts": true
   },
+  "assets": {
+    "Inter": "assets/Inter-VariableFont_slnt,wght.ttf"
+  },
   "color_schemes": {
     "air-light": {
       "primary": "1c1c1c",

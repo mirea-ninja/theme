@@ -1,3 +1,12 @@
+@font-face {
+  font-family: Inter;
+  src: url($Inter) format("truetype");
+}
+
+body {
+  font-family: Inter, sans-serif;
+}
+
 // custom search banner customizations
 .custom-search-banner-wrap {
   margin: 0 auto !important;
