@@ -57,15 +57,23 @@
 
 // Main customizations
 .alert {
-  margin: 1em 0;
+  align-items: center;
+  font-size: 1em;
+  line-height: 140%;
+  letter-spacing: 0.03em;
+  margin-top: 0em;
+  margin-bottom: 2em;
 }
 
 .alert.alert-info {
+  background-color: rgba(35, 109, 246, 0.1);
   border: none;
   border-radius: 8px;
   padding: 16px 24px;
+}
+
+.alert.alert-info {
   background-color: var(--tertiary-low);
-  color: var(--primary);
 }
 
 .topic-list .topic-list-header .topic-list-data,
