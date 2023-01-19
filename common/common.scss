@@ -60,6 +60,14 @@
   margin: 1em 0;
 }
 
+.alert.alert-info {
+  border: none;
+  border-radius: 8px;
+  padding: 16px 24px;
+  background-color: var(--tertiary-low);
+  color: var(--primary);
+}
+
 .topic-list .topic-list-header .topic-list-data,
 .topic-list .topic-list-item .topic-list-data {
   padding: 15px 5px;
@@ -152,16 +160,18 @@ div.ac-wrap {
 }
 
 .d-header-icons .d-icon {
-  border-radius: 100px;
+  color: var(--primary-very-high);
+  font-size: 16px;
 }
 
 .d-header-icons .icon {
-  border-radius: 0.25em;
-  margin-left: 0.3em;
-  border: 1px solid transparent;
-  svg {
-    font-size: 1.25em;
-  }
+  float: none;
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
 }
 
 .d-header-icons .icon img.avatar {
@@ -224,37 +234,13 @@ div.ac-wrap {
     0 1.63037px 3.62304px rgba(0, 0, 0, 0.0243888);
 }
 
-html {
-  body {
-    background: linear-gradient(
-        0deg,
-        rgba(var(--primary-rgb), 0.075) 0%,
-        rgba(var(--primary-rgb), 0.075) 100%
-      ),
-      linear-gradient(0deg, var(--secondary) 100%, var(--secondary) 100%);
-  }
-  .background-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background: linear-gradient(
-      90deg,
-      var(--tertiary-hover) 0%,
-      var(--tertiary) 100%
-    );
-    clip-path: ellipse(148% 70% at 91% -14%);
-  }
-}
-
 html body #main-outlet {
-  margin-top: 30px;
-  margin-bottom: 50px;
-  background: var(--secondary);
-  border-radius: 1em;
-  padding: 3em 3em 5%;
-  max-width: 1150px;
+  padding: 0 0;
+  margin-bottom: 6em;
+  margin-top: 2em;
+  max-width: unset !important;
+  width: unset !important;
+
   .archetype-regular & {
     min-height: 500px;
   }
@@ -262,14 +248,44 @@ html body #main-outlet {
     padding: 1.5em;
     margin-top: 0;
   }
-  padding-bottom: 5% !important; //overriding inline style
-  @include box-shadow;
   @media screen and (max-width: 1120px) {
     width: 80%;
   }
   @media screen and (max-width: 1075px) {
     width: 85%;
   }
+}
+
+.topic-body {
+  border-top: 1px solid var(--primary-very-low);
+  .topic-meta-data {
+    height: 45px;
+    padding-left: 20px;
+    line-height: 1.65em;
+  }
+}
+.topic-post:first-of-type .topic-body:before {
+  height: calc(100% - 72px);
+}
+.topic-body:before {
+  background-color: var(--primary-low);
+  content: "";
+  display: block;
+  position: absolute;
+  top: 64px;
+  left: -26px;
+  height: calc(100% - 72px);
+  width: 2px;
+}
+
+.topic-avatar {
+  border-top: 0;
+}
+
+.topic-post.sticky-avatar .topic-avatar {
+  margin-bottom: 25px;
+  top: 0;
+  position: relative;
 }
 
 .nav-pills > li a.active,
